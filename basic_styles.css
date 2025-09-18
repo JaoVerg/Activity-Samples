@@ -1,0 +1,106 @@
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  color: #0f172a; /* slate-900 */
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+h3 {
+  line-height: 1.2;
+}
+h1 {
+  font-size: clamp(2rem, 3.5vw + 1rem, 3.2rem);
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: clamp(1.4rem, 2.2vw + 1rem, 2rem);
+}
+h3 {
+  font-size: 1.125rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  background: #6753ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  box-shadow: 0 6px 20px rgba(103, 83, 255, 0.25);
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+.btn--big {
+  padding: 1rem 1.25rem;
+  font-size: 1.125rem;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-links a {
+  margin-left: var(--space-3);
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+  min-height: 72svh;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+}
+.hero__bg {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+      40% 40% at 20% 20%,
+      rgba(103, 83, 255, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      35% 35% at 80% 30%,
+      rgba(41, 178, 255, 0.22),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
+  z-index: -1;
+}
+.hero__content {
+  text-align: center;
+  padding: var(--space-6) 0;
+}
